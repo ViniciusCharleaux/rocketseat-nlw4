@@ -1,7 +1,6 @@
-import express, { response } from 'express';
-import { request } from 'http';
-import { send } from 'process';
-
+import 'reflect-metadata';  //importante vir primeiro nos imports
+import express from 'express';
+import './database';
 const app = express();
 
 app.get('/', (request, response) => {
