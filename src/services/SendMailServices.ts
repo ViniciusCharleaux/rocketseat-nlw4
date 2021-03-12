@@ -22,6 +22,7 @@ class SendMailServices {
     }
 
     async execute(to: string, subject: string, body: string){
+        console.log(to);
         const message = await this.client.sendMail({
             to,
             subject,

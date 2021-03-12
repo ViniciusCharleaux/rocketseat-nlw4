@@ -13,6 +13,7 @@ class UserContoller {
             email
         });
 
+
         if(userAlreadyExists){
             return response.status(400).json({
                 error: "email already existis"
@@ -27,6 +28,17 @@ class UserContoller {
 
         return response.status(201).json(user);
     }
+
+    async showAll(request: Request, response: Response){
+
+        const surveysRepository = getCustomRepository(UsersRepository);
+
+        const all = await surveysRepository.find();
+
+        return response.json(all);
+
+    }
+
 
 }
 

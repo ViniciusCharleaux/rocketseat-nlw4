@@ -10,6 +10,8 @@ const surveysController = new SurveysController();
 const sendMailController = new SendMailController(); 
 
 router.post("/users", userContoller.create);
+router.get("/users", userContoller.showAll);
+
 router.post("/surveys", surveysController.create);
 router.get("/surveys", surveysController.showAll);
 
